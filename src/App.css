@@ -30,9 +30,13 @@ body {
 }
 
 .page {
-  max-width: 980px;
+  padding: 56px 0 40px;
+}
+
+.page-container {
+  width: min(980px, 100%);
   margin: 0 auto;
-  padding: 56px 24px 40px;
+  padding: 0 24px;
 }
 
 .card {
@@ -132,7 +136,8 @@ body {
 }
 
 .section {
-  margin-top: 48px;
+  margin-top: 0;
+  margin-bottom: 64px;
 }
 
 .section-title {
@@ -191,7 +196,7 @@ body {
 }
 
 .footer {
-  margin-top: 56px;
+  margin-top: 0;
   text-align: center;
   color: var(--muted);
 }
@@ -219,5 +224,15 @@ body {
 
   .button-row {
     justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-media {
+    justify-content: center;
+  }
+
+  .section-title {
+    text-align: center;
   }
 }
