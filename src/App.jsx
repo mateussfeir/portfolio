@@ -1,35 +1,92 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+    <div className="container">
+      {/* HERO */}
+      <header className="hero">
+        <h1>Mateus Sfeir</h1>
+        <h2>Junior Software Engineer</h2>
+        <p className="subtitle">
+          Python • Django • SQL • REST APIs • Data Pipelines
         </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+
+        <div className="buttons">
+          <a
+            href="https://github.com/mateussfeir"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </a>
+          <a
+            href="https://www.bitbalance.ca"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Live Project
+          </a>
+        </div>
+      </header>
+
+      {/* PROJECT */}
+      <section>
+        <h3>Featured Project</h3>
+        <div className="card">
+          <h4>BitBalance</h4>
+          <p>
+            A personal finance and portfolio tracking web application built with
+            Django and Python. Aggregates stock and crypto prices using external
+            APIs, caching, and analytics to provide net-worth insights.
+          </p>
+          <a
+            href="https://www.bitbalance.ca"
+            target="_blank"
+            rel="noreferrer"
+            className="link"
+          >
+            View Live Demo →
+          </a>
+        </div>
+      </section>
+
+      {/* SKILLS */}
+      <section>
+        <h3>Tech Stack</h3>
+        <ul className="skills">
+          <li>Python</li>
+          <li>Django</li>
+          <li>PostgreSQL</li>
+          <li>REST APIs</li>
+          <li>JavaScript</li>
+          <li>React</li>
+          <li>Git & GitHub</li>
+        </ul>
+      </section>
+
+      {/* ABOUT */}
+      <section>
+        <h3>About Me</h3>
+        <p>
+          International student based in Toronto, graduating in April 2026.
+          Strong interest in backend development, data-driven systems, and
+          fintech products.
+        </p>
+      </section>
+
+      {/* FOOTER */}
+      <footer>
+        <p>© {new Date().getFullYear()} Mateus Sfeir</p>
+      </footer>
+    </div>
+  );
 }
 
-export default App
+export default App;
