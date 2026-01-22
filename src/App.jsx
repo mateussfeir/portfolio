@@ -33,7 +33,7 @@ const ProjectCard = ({ title, description, href, linkText }) => (
       <span className="link">{linkText}</span>
     </div>
     <img
-      src="/bitbalance-preview.jpeg"
+      src={`${import.meta.env.BASE_URL}bitbalance-preview.jpeg`}
       alt="BitBalance dashboard preview"
       className="project-preview-image"
     />
@@ -47,7 +47,7 @@ function App() {
         <header className="hero card fade-up" style={{ "--delay": "0ms" }}>
           <div className="hero-media">
             <img
-              src="./mateus.jpeg"
+              src={`${import.meta.env.BASE_URL}mateus.jpeg`}
               alt="Mateus Sfeir"
               className="avatar"
             />
