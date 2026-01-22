@@ -32,14 +32,14 @@ body {
 .page {
   display: flex;
   justify-content: center;
-  padding: 48px 0 40px;
+  padding: clamp(32px, 6vw, 56px) 0 clamp(28px, 5vw, 44px);
 }
 
 .page-container {
   width: 100%;
   max-width: 1360px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 clamp(18px, 4vw, 40px);
 }
 
 .card {
@@ -51,9 +51,9 @@ body {
 
 .hero {
   display: grid;
-  grid-template-columns: 160px 1fr;
+  grid-template-columns: minmax(120px, 160px) 1fr;
   gap: 24px;
-  padding: 24px 28px;
+  padding: clamp(20px, 4vw, 28px);
   align-items: center;
   margin-bottom: 52px;
 }
@@ -74,7 +74,7 @@ body {
 
 .hero-content h1 {
   margin: 6px 0 6px;
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 4vw, 2.6rem);
   letter-spacing: -0.02em;
 }
 
@@ -88,6 +88,7 @@ body {
 .hero-content h2 {
   margin: 0 0 10px;
   font-weight: 500;
+  font-size: clamp(1.05rem, 2.6vw, 1.3rem);
   color: var(--muted);
 }
 
@@ -167,6 +168,7 @@ body {
   align-items: center;
   text-decoration: none;
   color: inherit;
+  min-width: 0;
   transition: transform 0.22s ease, border 0.22s ease, box-shadow 0.22s ease;
 }
 
@@ -265,6 +267,31 @@ body {
 
   .project-card {
     grid-template-columns: 1fr;
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    margin-bottom: 40px;
+  }
+
+  .button {
+    height: 42px;
+    padding: 0 16px;
+    font-size: 0.92rem;
+  }
+
+  .pill-row {
+    gap: 10px;
+  }
+
+  .pill {
+    font-size: 0.88rem;
+  }
+
+  .project-card {
+    padding: 20px;
   }
 }
 
@@ -291,5 +318,20 @@ body {
 
   .project-preview-image {
     display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 20px 16px;
+  }
+
+  .avatar {
+    width: 96px;
+    height: 96px;
+  }
+
+  .subtitle {
+    max-width: 100%;
   }
 }
