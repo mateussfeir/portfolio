@@ -1,6 +1,6 @@
 import "./App.css";
 
-const Button = ({ href, children, variant = "default" }) => (
+const Button = ({ href, children, variant = "secondary" }) => (
   <a
     className={`button ${variant}`}
     href={href}
@@ -13,30 +13,38 @@ const Button = ({ href, children, variant = "default" }) => (
 
 const Pill = ({ children }) => <span className="pill">{children}</span>;
 
-const Section = ({ title, children }) => (
-  <section className="section">
+const Section = ({ title, children, className = "" }) => (
+  <section className={`section ${className}`}>
     <h3 className="section-title">{title}</h3>
     {children}
   </section>
 );
 
 const ProjectCard = ({ title, description, href, linkText }) => (
-  <article className="card project-card">
-    <div>
+  <a
+    className="card project-card featured-project"
+    href={href}
+    target="_blank"
+    rel="noreferrer"
+  >
+    <div className="project-copy">
       <h4>{title}</h4>
       <p>{description}</p>
+      <span className="link">{linkText}</span>
     </div>
-    <a className="link" href={href} target="_blank" rel="noreferrer">
-      {linkText}
-    </a>
-  </article>
+    <img
+      src="/bitbalance-preview.jpeg"
+      alt="BitBalance dashboard preview"
+      className="project-preview-image"
+    />
+  </a>
 );
 
 function App() {
   return (
     <div className="page">
       <div className="page-container">
-        <header className="hero card">
+        <header className="hero card fade-up" style={{ "--delay": "0ms" }}>
           <div className="hero-media">
             <img
               src="./mateus.jpeg"
@@ -46,7 +54,9 @@ function App() {
           </div>
           <div className="hero-content">
             <p className="eyebrow">Hello, I am</p>
-            <h1>Mateus Sfeir</h1>
+            <h1>
+              <span className="name-accent">Mateus Sfeir</span>
+            </h1>
             <h2>Junior Software Engineer</h2>
             <p className="subtitle">
               I build data-driven web products with Python, Django, and modern
@@ -55,17 +65,17 @@ function App() {
             </p>
             <div className="button-row">
               <Button href="https://github.com/mateussfeir">GitHub</Button>
-              <Button href="https://www.linkedin.com/in/REPLACE_ME/" variant="ghost">
+              <Button href="https://www.linkedin.com/in/REPLACE_ME/">
                 LinkedIn
               </Button>
-              <Button href="https://www.bitbalance.ca" variant="highlight">
-                BitBalance
+              <Button href="https://www.bitbalance.ca" variant="primary">
+                BitBalance <span className="button-arrow">→</span>
               </Button>
             </div>
           </div>
         </header>
 
-        <Section title="Featured Project">
+        <Section title="Featured Project" className="fade-up" >
           <ProjectCard
             title="BitBalance"
             description="Portfolio and net worth tracker built with Django and Python. Uses external APIs with caching and analytics for clear, real-time insights."
@@ -74,7 +84,7 @@ function App() {
           />
         </Section>
 
-        <Section title="Tech Stack">
+        <Section title="Tech Stack" className="fade-up" >
           <div className="pill-row">
             <Pill>Python</Pill>
             <Pill>Django</Pill>
