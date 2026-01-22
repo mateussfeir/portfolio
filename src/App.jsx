@@ -38,7 +38,7 @@ function App() {
       <header className="hero card">
         <div className="hero-media">
           <img
-            src="/mateus.jpeg"
+            src="./mateus.jpeg"
             alt="Mateus Sfeir"
             className="avatar"
           />
