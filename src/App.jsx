@@ -65,7 +65,7 @@ function App() {
             </p>
             <div className="button-row">
               <Button href="https://github.com/mateussfeir">GitHub</Button>
-              <Button href="https://www.linkedin.com/in/REPLACE_ME/">
+              <Button href="https://www.linkedin.com/in/mateus-sfeir-b65393152/">
                 LinkedIn
               </Button>
               <Button href="https://www.bitbalance.ca" variant="primary">
