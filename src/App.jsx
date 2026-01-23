@@ -57,7 +57,7 @@ function App() {
             <h1>
               <span className="name-accent">Mateus Sfeir</span>
             </h1>
-            <h2>Junior Software Engineer</h2>
+            <h2>Software Engineer</h2>
             <p className="subtitle">
               I build data-driven web products with Python, Django, and modern
               JavaScript — focused on clean backend systems and real-world
