@@ -43,7 +43,7 @@ const ProjectCard = ({ title, description, href, linkText }) => (
 function App() {
   return (
     <div className="page">
-      <div className="page-container">
+      <main className="container">
         <header className="hero card fade-up" style={{ "--delay": "0ms" }}>
           <div className="hero-media">
             <img
@@ -107,7 +107,7 @@ function App() {
         <footer className="footer">
           <p>© {new Date().getFullYear()} Mateus Sfeir</p>
         </footer>
-      </div>
+      </main>
     </div>
   );
 }
