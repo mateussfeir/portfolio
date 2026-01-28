@@ -71,6 +71,9 @@ function App() {
               <Button href="https://www.bitbalance.ca" variant="primary">
                 BitBalance <span className="button-arrow">→</span>
               </Button>
+              <Button href="mailto:mateussfeir@hotmail.com" variant="secondary">
+                Email me <span className="button-arrow">→</span>
+              </Button>
             </div>
           </div>
         </header>
